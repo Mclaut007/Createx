@@ -1,0 +1,425 @@
+.footer {
+  background: var(--black-color);
+  color: var(--white-color);
+  // .footer__top
+
+  &__top {
+    border-bottom: 1px solid rgba(218, 219, 221, 0.4);
+    border-image: linear-gradient(
+      270deg,
+      rgba(218, 219, 221, 0) 0%,
+      rgba(218, 219, 221, 0.5) 12.33%,
+      rgba(218, 219, 221, 0.4) 51.91%,
+      rgba(218, 219, 221, 0.5) 87.85%,
+      rgba(218, 219, 221, 0) 100%
+    );
+    border-image-slice: 1;
+  }
+
+  // .footer__top-container
+
+  &__top-container {
+    display: flex;
+    // padding-top: rem(80);
+    padding-top: proadrem(40, 80, $minWidthRemWithout, $maxWidthRemWithout);
+    // padding-bottom: rem(60);
+    padding-bottom: proadrem(30, 60, $minWidthRemWithout, $maxWidthRemWithout);
+    gap: rem(50);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // @media (max-width: $tablet) {
+    //   justify-content: flex-start;
+    // }
+    @media (max-width: $tablet) {
+      column-gap: 0;
+    }
+  }
+
+  // .footer__about-company
+
+  &__about-company {
+    width: rem(281);
+    // @media (max-width: $desk) {
+    //   flex-grow: 1;
+    // }
+
+    @media (max-width: $tablet) {
+      order: 1;
+      margin-right: rem(50);
+      // padding-right: 0;
+    }
+    @media (max-width: $mobileMiddle) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  // .footer__logo
+
+  &__logo {
+    display: block;
+    // margin-bottom: rem(24);
+    margin-bottom: proadrem(16, 25, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .footer__about-company-text
+
+  &__about-company-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: rem(12);
+    line-height: 1.5;
+    &:not(:last-child) {
+      // margin-bottom: rem(38);
+      margin-bottom: proadrem(15, 38, $minWidthRemWithout, $maxWidthRemWithout);
+    }
+    // @media (max-width: $mobileSmall) {
+    //   width: 100%;
+    // }
+  }
+
+  // .footer__social-media
+
+  &__social-media {
+    display: flex;
+    gap: rem(20);
+    align-items: center;
+  }
+
+  // .footer__social-media-link
+
+  &__social-media-link {
+    // @media (any-hover: hover) and (pointer: fine) {
+    //   &:hover {
+    //     text-decoration: underline;
+    //   }
+    // }
+  }
+
+  // .footer__social-media-icon
+
+  &__social-media-icon {
+    width: rem(24);
+    height: rem(24);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .footer__menu
+
+  &__menu {
+    // width: fit-content;
+    max-width: rem(130);
+    // @media (max-width: $tablet) {
+    //   max-width: none;
+    //   flex-grow: 1;
+    // }
+    @media (max-width: $tablet) {
+      max-width: none;
+      width: 33.3%;
+      padding-right: rem(50);
+    }
+    @media (max-width: $mobileMiddle) {
+      flex-grow: 1;
+      padding-right: 0;
+      margin-right: rem(30);
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  // .footer__contacts
+
+  &__contacts {
+    // width: fit-content;
+    max-width: rem(180);
+    // @media (max-width: $tablet) {
+    //   max-width: none;
+    //   flex-grow: 1;
+    // }
+    @media (max-width: $tablet) {
+      max-width: none;
+      width: 33.3%;
+    }
+    @media (max-width: $mobileMiddle) {
+      width: 100%;
+    }
+  }
+
+  // .footer__contacts-title
+
+  &__contacts-title {
+  }
+
+  &__phone,
+  &__mail {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: rem(8);
+    display: flex;
+    align-items: center;
+    // max-width: rem(170);
+    gap: rem(8);
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      opacity: 0.6;
+    }
+  }
+
+  // .footer__phone
+
+  &__phone {
+    &::before {
+      background: url(../images/footer/phone-icon.svg) no-repeat center;
+    }
+  }
+
+  // .footer__mail
+
+  &__mail {
+    &::before {
+      background: url(../images/footer/mail-icon.svg) no-repeat center;
+    }
+  }
+
+  // .footer__sign-up-block
+
+  &__sign-up-block {
+    width: rem(286);
+    @media (max-width: $tablet) {
+      order: 1;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  &__sign-up-title,
+  &__contacts-title {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: rem(1);
+    margin-bottom: rem(12);
+  }
+
+  // .footer__sign-up-title
+
+  &__sign-up-title {
+    // margin-bottom: rem(24);
+    margin-bottom: proadrem(16, 24, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .footer__sign-up-form
+
+  &__sign-up-form {
+    position: relative;
+    margin-bottom: rem(12);
+  }
+
+  // .footer__sign-up-input
+
+  &__sign-up-input {
+    display: block;
+    width: 100%;
+    padding: rem(9) rem(40) rem(9) rem(12);
+    border-radius: rem(4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white-color);
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: rem(12);
+      line-height: 1.5;
+    }
+  }
+
+  // .footer__sign-up-submit
+
+  &__sign-up-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    height: 100%;
+    width: rem(38);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  // .footer__sign-up-arrow
+
+  &__sign-up-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(14);
+  }
+
+  // .footer__sign-up-text
+
+  &__sign-up-text {
+    color: var(--white-color);
+    font-size: rem(10);
+    line-height: 1.5;
+  }
+
+  // .footer__middle
+
+  &__middle {
+  }
+
+  // .footer__middle-container
+
+  &__middle-container {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .footer__companies
+
+  &__companies {
+    display: flex;
+    // gap: rem(24);
+    gap: proadrem(15, 24, $minWidthRemWithout, $maxWidthRemWithout);
+    flex-wrap: wrap;
+  }
+
+  // .footer__company-img-wrapper
+
+  &__company-img-wrapper {
+    width: rem(120);
+    height: rem(40);
+    position: relative;
+    border-radius: rem(2);
+    overflow: hidden;
+  }
+
+  // .footer__company-img
+
+  &__company-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  // .footer__go-to-top-btn
+
+  &__go-to-top-btn {
+    color: var(--white-color);
+    font-size: rem(14);
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-end;
+    gap: rem(16);
+    transition: all 0.3s ease 0s;
+    &::after {
+      content: "";
+      width: rem(40);
+      height: rem(40);
+      background: url(../images/footer/arrow-up.svg) no-repeat center, var(--blue-color);
+      border-radius: rem(4);
+    }
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+    background: rgb(255, 255, 255, 0.05);
+  }
+
+  // .footer__bottom-container
+
+  &__bottom-container {
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+  }
+
+  // .footer__bottom-copyright
+
+  &__bottom-copyright {
+    font-size: rem(12);
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+  }
+
+  // .footer__heart-icon
+
+  &__heart-icon {
+    &::before {
+      content: "";
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      background: url(../images/footer/heart.svg) no-repeat center;
+    }
+  }
+}
+
+.footer-menu {
+  // .footer-menu__title
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: rem(1);
+    margin-bottom: rem(12);
+  }
+
+  // .footer-menu__list
+
+  &__list {
+  }
+
+  // .footer-menu__item
+
+  &__item {
+    max-width: rem(170);
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  // .footer-menu__link
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

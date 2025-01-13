@@ -1,0 +1,23 @@
+.clients {
+  // .clients__container 120 / 64
+
+  &__container {
+    padding-top: rem(28);
+    padding-bottom: rem(50);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, rem(120));
+    justify-content: space-between;
+    align-items: center; 
+    column-gap: rem(60);
+    row-gap: rem(30);
+    @media (max-width: $mobileMiddle) {
+      justify-content: center;
+    }
+  }
+
+  // .clients__img
+
+  &__img {
+  }
+}
+

@@ -1,0 +1,115 @@
+// .progress-ring {
+//   position: relative;
+// }
+
+// .progress-ring__circle-bg {
+//   opacity: 0.3;
+// }
+
+// .progress-ring__circle {
+//   // stroke-dasharray: 50 10;
+//   transform-origin: center;
+//   transform: rotate(-90deg);
+//   // transition: stroke-dashoffset linear 0.3s;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50deg, -50deg);
+// }
+
+.achievements {
+  position: relative;
+  &::before {
+    content: "";
+    // width: rem(176);
+    width: 9%;
+    height: rem(484);
+    background: url(../images/achievements/decor-bg-left.svg) no-repeat left top / contain;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    // width: rem(272);
+    width: 14%;
+    height: rem(763);
+    background: url(../images/achievements/decor-bg-right.svg) no-repeat right top / contain;
+    position: absolute;
+    top: -180%;
+    right: 0;
+    z-index: -1;
+  }
+  // .achievements__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, rem(148));
+    justify-content: center;
+    // gap: rem(48);
+    gap: proadrem(10, 48, $minWidthRemWithout, $maxWidthRemWithout);
+    row-gap: rem(30);
+  }
+
+  // .achievements__item
+
+  &__item {
+  }
+
+  // .achievements__item-top
+
+  &__item-top {
+    position: relative;
+  }
+
+  // .achievements__number
+
+  &__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--black-color);
+    // font-size: rem(32);
+    font-size: proadrem(25, 32, $minWidthRemWithout, $maxWidthRemWithout);
+    font-weight: 900;
+    line-height: 1.3;
+  }
+
+  // .achievements__item-bottom
+
+  &__item-bottom {
+    text-align: center;
+    // margin-top: rem(20);
+    margin-top: proadrem(8, 20, $minWidthRemWithout, $maxWidthRemWithout);
+    font-size: rem(14);
+    line-height: 1.5;
+  }
+}
+.progress-ring {
+  position: relative;
+  max-width: 100%;
+  width: proadrem(100, 148, $minWidthRemWithout, $maxWidthRemWithout);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  // .progress-ring__circle-bg
+
+  &__circle-bg {
+    opacity: 0.3;
+  }
+
+  // .progress-ring__circle
+
+  &__circle {
+    // stroke-dasharray: 50 10;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    // transition: stroke-dashoffset linear 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50deg, -50deg);
+  }
+}
